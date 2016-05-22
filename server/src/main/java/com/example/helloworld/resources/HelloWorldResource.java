@@ -7,7 +7,7 @@ public class HelloWorldResource implements HelloWorldClient
 {
 
   @Override
-  public Saying receiveDate()
+  public Saying receiveHi()
   {
     return new Saying("HI");
   }

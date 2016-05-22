@@ -17,7 +17,6 @@
   <modules>
     <module>client</module>
     <module>server</module>
-    <module>integration-test</module>
   </modules>
 
   <build>

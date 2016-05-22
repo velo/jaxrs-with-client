@@ -13,6 +13,7 @@ import org.junit.ClassRule;
 import org.junit.Test;
 
 import com.example.helloworld.api.Saying;
+import com.example.helloworld.client.ClientFactory;
 
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
@@ -48,6 +49,14 @@ public class IntegrationTest
         .queryParam("name", name.get())
         .request()
         .get(Saying.class);
+    assertThat(saying.getContent()).isEqualTo("HI");
+  }
+
+  @Test
+  public void testUsingClient() throws Exception
+  {
+    ClientFactory factory = new ClientFactory("http://localhost:" + RULE.getLocalPort());
+    Saying saying = factory.newHelloWorldClient().receiveHi();
     assertThat(saying.getContent()).isEqualTo("HI");
   }
 

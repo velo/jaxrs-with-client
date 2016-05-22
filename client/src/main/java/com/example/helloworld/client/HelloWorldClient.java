@@ -13,6 +13,6 @@ public interface HelloWorldClient
 {
 
   @GET
-  Saying receiveDate();
+  Saying receiveHi();
 
 }
