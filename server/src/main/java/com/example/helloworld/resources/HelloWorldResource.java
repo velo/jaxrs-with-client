@@ -12,4 +12,9 @@ public class HelloWorldResource implements HelloWorldClient
     return new Saying("HI");
   }
 
+    @Override
+    public Saying receiveHi(String message) {
+        return new Saying(message);
+    }
+
 }
