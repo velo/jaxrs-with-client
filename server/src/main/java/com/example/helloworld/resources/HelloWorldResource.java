@@ -1,18 +1,12 @@
 package com.example.helloworld.resources;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
 import com.example.helloworld.api.Saying;
+import com.example.helloworld.client.HelloWorldClient;
 
-@Path("/hello-world")
-@Produces(MediaType.APPLICATION_JSON)
-public class HelloWorldResource
+public class HelloWorldResource implements HelloWorldClient
 {
 
-  @GET
+  @Override
   public Saying receiveDate()
   {
     return new Saying("HI");

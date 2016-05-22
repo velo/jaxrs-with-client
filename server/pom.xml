@@ -8,9 +8,15 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>server</artifactId>
+  <artifactId>jrswc-server</artifactId>
 
   <dependencies>
+    <dependency>
+      <groupId>com.marvinformatics.jaxrswithclient</groupId>
+      <artifactId>jrswc-client</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>io.dropwizard</groupId>
       <artifactId>dropwizard-core</artifactId>
