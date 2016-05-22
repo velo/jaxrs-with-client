@@ -228,7 +228,7 @@
     </plugins>
   </build>
 
-  <url>https://github.com/${owner}/${name}/</url>
+  <url>https://github.com/velo/jaxrs-with-client/</url>
 
   <inceptionYear>2016</inceptionYear>
 
@@ -250,9 +250,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:${owner}/${name}.git</connection>
-    <developerConnection>scm:git:git@github.com:${owner}/${name}.git</developerConnection>
-    <url>https://github.com/${owner}/${name}/</url>
+    <connection>scm:git:git@github.com:velo/jaxrs-with-client.git</connection>
+    <developerConnection>scm:git:git@github.com:velo/jaxrs-with-client.git</developerConnection>
+    <url>https://github.com/velo/jaxrs-with-client/</url>
   </scm>
 
   <distributionManagement>
