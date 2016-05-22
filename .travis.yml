@@ -11,3 +11,4 @@ install:
 
 script:
   - mvn install -Pci -B
+  - mvn jacoco:report coveralls:report

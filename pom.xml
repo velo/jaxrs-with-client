@@ -32,10 +32,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <coveralls.token>ExDbfxqmGWYkcjAbLEJvwRoC5IPlHyixd</coveralls.token>
 
-    <java.version>1.8</java.version>
     <dropwizard.version>0.9.2</dropwizard.version>
     <jersey.version>2.22.2</jersey.version>
+    <java.version>1.8</java.version>
   </properties>
 
   <build>
@@ -89,14 +90,6 @@
           <skip>${skipTests}</skip>
           <repoToken>${coveralls.token}</repoToken>
         </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>report</goal>
-            </goals>
-            <phase>verify</phase>
-          </execution>
-        </executions>
       </plugin>
 
       <plugin>
