@@ -20,13 +20,13 @@ import io.dropwizard.testing.junit.DropwizardAppRule;
 
 public class IntegrationTest {
 
-  private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-example.yml");
+    private static final String CONFIG_PATH = ResourceHelpers.resourceFilePath("test-example.yml");
 
-  @ClassRule
-  public static final DropwizardAppRule<HelloWorldConfiguration> RULE = new DropwizardAppRule<>(
-      HelloWorldApplication.class, CONFIG_PATH);
+    @ClassRule
+    public static final DropwizardAppRule<HelloWorldConfiguration> RULE = new DropwizardAppRule<>(
+            HelloWorldApplication.class, CONFIG_PATH);
 
-  private Client client;
+    private Client client;
 
     @Before
     public void setUp() throws Exception {

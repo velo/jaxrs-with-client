@@ -6,27 +6,23 @@ import feign.jackson.JacksonDecoder;
 import feign.jackson.JacksonEncoder;
 import feign.jaxrs.JAXRSContract;
 
-public class ClientFactory
-{
+public class ClientFactory {
 
-  private final String url;
+    private final String url;
 
-  public ClientFactory(String url)
-  {
-    this.url = url;
-  }
+    public ClientFactory(String url) {
+        this.url = url;
+    }
 
-  public HelloWorldClient newHelloWorldClient()
-  {
-    return feign().target(HelloWorldClient.class, url);
-  }
+    public HelloWorldClient newHelloWorldClient() {
+        return feign().target(HelloWorldClient.class, url);
+    }
 
-  Builder feign()
-  {
-    return Feign.builder()
-        .contract(new JAXRSContract())
-        .encoder(new JacksonEncoder())
-        .decoder(new JacksonDecoder());
-  }
+    Builder feign() {
+        return Feign.builder()
+                .contract(new JAXRSContract())
+                .encoder(new JacksonEncoder())
+                .decoder(new JacksonDecoder());
+    }
 
 }

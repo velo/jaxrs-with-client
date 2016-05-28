@@ -10,11 +10,10 @@ import com.example.helloworld.api.Saying;
 
 @Path("/hello-world")
 @Produces(MediaType.APPLICATION_JSON)
-public interface HelloWorldClient
-{
+public interface HelloWorldClient {
 
-  @GET
-  Saying receiveHi();
+    @GET
+    Saying receiveHi();
 
     @GET
     @Path("custom")
